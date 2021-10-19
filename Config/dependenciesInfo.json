@@ -1,0 +1,81 @@
+{
+  "Express":
+  {
+      "Name": "express",
+      "Description": "Library to create and management NodeJS Server Applications",
+      "InstallCommand": "npm install express --save",
+      "URL": "https://expressjs.com/es/starter/installing.html"
+  },
+  "Nodemon":
+  {
+      "Name": "nodemon",
+      "Description": "Library to restart server after any code changes",
+      "InstallCommand": "npm install -g nodemon",
+      "URL": "https://www.npmjs.com/package/nodemon"
+  },
+  "Cors":
+  {
+      "Name": "cors",
+      "Description": "Middelware to allow receive and transimit data to external endpoints",
+      "InstallCommand": "npm i cors",
+      "URL": "https://github.com/expressjs/cors npm docs cors"
+  },
+  "EsLint":
+  {
+      "Name": "eslint",
+      "Description": "Helper tool to keep a clean code",
+      "InstallCommand": "npm install eslint eslint-config-prettier eslint-plugin-prettier prettier -D",
+      "URL": "https://www.npmjs.com/package/eslint"
+  },
+  "EJS":
+  {
+      "Name": "ejs",
+      "Description": "JavaScript template language to build dynamic html views on server side",
+      "InstallCommand": "npm install ejs",
+      "URL": "https://www.npmjs.com/package/ejs"
+  },
+  "MongoDB":
+  {
+      "Name": "mongodb",
+      "Description": "MongoDB package to managenet database connection and statements to a Mongo Data Base",
+      "InstallCommand": "npm i mongodb",
+      "URL": "https://www.npmjs.com/package/mongodb"
+  },
+  "Mongoose":
+  {
+      "Name": "mongoose",
+      "Description": "Helper to build schemas and data validation for mongoDB",
+      "InstallCommand": "npm i mongoose",
+      "URL": "https://mongoosejs.com/ npm docs mongoose"
+  }
+  ,
+  "DotEnv":
+  {
+      "Name": "dotenv",
+      "Description": "Helper to load enviroment variables from process",
+      "InstallCommand": "npm install dotenv",
+      "URL": "https://www.npmjs.com/package/dotenv"
+  },
+  "Boom":
+  {
+    "Name": "Boom",
+    "Description": "Helper to handler errors on middelwares",
+    "InstallCommand": "npm i @hapi/boom",
+    "URL": "https://github.com/hapijs/boom npm docs @hapi/boom"
+  },
+  "joi":
+  {
+    "Name": "joi joi-oid",
+    "Description": "Helpero to validate request data on middelwares",
+    "InstallCommand": "npm i joi",
+    "URL": "https://github.com/sideway/joi npm docs joi"
+  },
+  "Uuid":
+  {
+    "Name" : "uuid",
+    "Description" : "Helper to generate uuid property values",
+    "InstallCommand" : "npm i uuid",
+    "URL" : "https://github.com/uuidjs/uuid npm docs uuid"
+  }
+
+}
