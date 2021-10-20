@@ -1,4 +1,4 @@
-const DBLib = require("../DBLib");
+const DBLib = require("../../DBLibs/DBLib");
 
 class PersistentProductSchema extends DBLib{
 
