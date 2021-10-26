@@ -7,12 +7,16 @@ class Branch {
         this.idAddress = dataObject.idAddress;
         // Information data
         this.name = dataObject.name;
-
+        this.nameToPrint = dataObject.nameToPrint;
     }
 
     // Get/Set Data
     get Name() { return this.name; }
     set Name(newValue) { this.OnChange(propertyName); this.name = newValue; }
+
+    get NameToPrint() { return this.nameToPrint; }
+    set NameToPrint(newValue) { this.OnChange(propertyName); this.nameToPrint = newValue; }
+
 
     // Add categories
     AddCategory(value) {
@@ -22,6 +26,7 @@ class Branch {
     // Updating data
     Update(data) {
         this.Name = data.name;
+        this.NameToPrint = data.nameToPrint;
     }
 
     // Can delete data?
@@ -32,6 +37,9 @@ class Branch {
     // OnChange data
     OnChange(propertyName) {
         if (propertyName === "Name") {
+            // Code
+        }
+        if (propertyName === "NameToPrint") {
             // Code
         }
     }
