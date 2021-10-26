@@ -7,12 +7,15 @@ class MovementFolioControl{
     this.timestamp = new Date();
     this.optimisticLockField = 0;
   }
+  
+  GetMovementFolio() 
+  {
+
+  }
+
 }
 
-function GetMovementFolio() 
-{
-
-};
+ 
 
 
 module.exports = MovementFolioControl
