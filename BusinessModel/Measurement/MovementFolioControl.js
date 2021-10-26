@@ -6,7 +6,7 @@ class MovementFolioControl{
     this.consecutive = dataObject.consecutive;
     this.timestamp = new Date();
     this.optimisticLockField = 0;
-  }
+  } 
   
   GetMovementFolio() 
   {
