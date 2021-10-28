@@ -12,7 +12,7 @@ class ProductRoutes extends RouterRegister
     super("products");
   }
 
-   async GetRoutes(router){
+  async GetRoutes(router){
 
     router.get("/", async (req, res, next) => {
       try{
