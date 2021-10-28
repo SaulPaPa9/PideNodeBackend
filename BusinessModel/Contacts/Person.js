@@ -1,46 +1,42 @@
 const { v4: uuidv4 } = require("uuid");
 class Person {
   constructor(dataObject) {
-    // Principal data
-    this.id = dataObject.id || uuidv4();
-    this.idAddress = dataObject.idAddress;
-    // Personal data
+    //this.id = dataObject.id || uuidv4();
+    this.address = dataObject.address; // Link to object
     this.firstName = dataObject.firstName;
     this.middleName = dataObject.middleName;
     this.lastName = dataObject.lastName;
     this.birthDate = dataObject.birthDate;
     this.gender = dataObject.gender;
-    // Contact data
     this.phoneNumber = dataObject.phoneNumber;
     this.email = dataObject.email;
     this.rfc = dataObject.rfc;
-
   }
 
   // Get/Set Data
   get FirstName() { return this.firstName; }
-  set FirstName(newValue) { this.OnChange(propertyName); this.firstName = newValue; }
+  set FirstName(newValue) { this.OnChange("FirstName",this.externalNumber, newValue); this.firstName = newValue; }
 
   get MiddleName() { return this.middleName; }
-  set MiddleName(newValue) { this.OnChange(propertyName); this.middleName = newValue; }
+  set MiddleName(newValue) { this.OnChange("MiddleName",this.middleName, newValue); this.middleName = newValue; }
 
   get LastName() { return this.lastName; }
-  set LastName(newValue) { this.OnChange(propertyName); this.lastName = newValue; }
+  set LastName(newValue) { this.OnChange("LastName",this.lastName, newValue); this.lastName = newValue; }
 
   get BirthDate() { return this.birthDate; }
-  set BirthDate(newValue) { this.OnChange(propertyName); this.birthDate = newValue; }
+  set BirthDate(newValue) { this.OnChange("BirthDate",this.birthDate, newValue); this.birthDate = newValue; }
 
   get Gender() { return this.gender; }
-  set Gender(newValue) { this.OnChange(propertyName); this.gender = newValue; }
+  set Gender(newValue) { this.OnChange("Gender",this.gender, newValue); this.gender = newValue; }
 
   get PhoneNumber() { return this.phoneNumber; }
-  set PhoneNumber(newValue) { this.OnChange(propertyName); this.phoneNumber = newValue; }
+  set PhoneNumber(newValue) { this.OnChange("PhoneNumber",this.phoneNumber, newValue); this.phoneNumber = newValue; }
 
   get Email() { return this.email; }
-  set Email(newValue) { this.OnChange(propertyName); this.email = newValue; }
+  set Email(newValue) { this.OnChange("Email",this.email, newValue); this.email = newValue; }
 
   get Rfc() { return this.rfc; }
-  set Rfc(newValue) { this.OnChange(propertyName); this.rfc = newValue; }
+  set Rfc(newValue) { this.OnChange("Rfc",this.rfc, newValue); this.rfc = newValue; }
 
   // Updating data
   Update(data) {
@@ -60,29 +56,29 @@ class Person {
   }
 
   // OnChange data
-  OnChange(propertyName) {
-    if (propertyName === "FirstName") {
+  OnChange(propertyName, oldValue, newValue) {
+    if (propertyName === "FirstName" && newValue != null) {
       // Code
     }
-    if (propertyName === "MiddleName") {
+    if (propertyName === "MiddleName" && newValue != null) {
       // Code
     }
-    if (propertyName === "LastName") {
+    if (propertyName === "LastName" && newValue != null) {
       // Code
     }
-    if (propertyName === "BirthDate") {
+    if (propertyName === "BirthDate" && newValue != null) {
       // Code
     }
-    if (propertyName === "Gender") {
+    if (propertyName === "Gender" && newValue != null) {
       // Code
     }
-    if (propertyName === "PhoneNumber") {
+    if (propertyName === "PhoneNumber" && newValue != null) {
       // Code
     }
-    if (propertyName === "Email") {
+    if (propertyName === "Email" && newValue != null) {
       // Code
     }
-    if (propertyName === "Rfc") {
+    if (propertyName === "Rfc" && newValue != null) {
       // Code
     }
   }
