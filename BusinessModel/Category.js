@@ -4,7 +4,7 @@ class Category{
         // this.id = dataObject.id || uuidv4();
         this.date = new Date();
         this.supCategory = dataObject.supCategory; // change
-        this.name; // change
+        this.name = dataObject.name; // change
         this.description; // change
     }
 
