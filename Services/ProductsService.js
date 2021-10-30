@@ -7,12 +7,13 @@ class ProductsService
 
   this.Products = [
     {id : "560a8451-a29c-41d4-a716-544676554400", name:"P1", code:"1"},
-    {id : "560a8452-a29d-41d4-a716-544676554400", name:"P2", code:"2"}]
+    {id : "560a8452-a29d-41d4-a716-544676554400", name:"P2", code:"2"}];
+    
   }
 
   async FindAll(){
      // return this.Products;
-     return PersistentProductsService.FindAll();
+     return await PersistentProductsService.FindAll();
     }
 
     async FindByKey(id){
