@@ -12,7 +12,7 @@ class Products{
 
     Update(data){
       this.Name = data.name;
-      //this.dateUpdated = new Date();
+      // this.dateUpdated = new Date();
     }
 
     CanDelete(){
@@ -20,7 +20,7 @@ class Products{
     }
 
   OnChange(propertyName){
-    //console.log("OnChange");
+    // console.log("OnChange");
     if(propertyName === "Name")
       this.dateUpdated = new Date();
   }

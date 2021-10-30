@@ -2,10 +2,10 @@
 class Category{
     constructor(dataObject){
         // this.id = dataObject.id || uuidv4();
+        this.name = dataObject.name;
         this.date = new Date();
-        this.supCategory = dataObject.supCategory; // change
-        this.name = dataObject.name; // change
-        this.description; // change
+        this.supCategory = dataObject.supCategory;
+        this.description = dataObject.description;
     }
 
     get Name() { return this.name; }
