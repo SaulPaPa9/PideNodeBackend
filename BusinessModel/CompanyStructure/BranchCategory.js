@@ -1,7 +1,9 @@
-// const {v4 : uuidv4 } =require("uuid");
-class BranchCategory{
+const BaseModel = require("../../Persistance/BaseModel");
+
+class BranchCategory extends BaseModel{
     constructor(dataObject){
-        // this.id = dataObject.id || uuidv4();
+      super(dataObject);
+
         this.branch = dataObject.branch;
         this.category;
         this.date = new Date();

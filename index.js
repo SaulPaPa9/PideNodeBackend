@@ -1,7 +1,7 @@
 
 const express = require('express');
 const cors = require('cors');
-const APIRoutes = require('./Routes/APIRoutes');
+const APIRoutes = require('./Routes/Settings/APIRoutes');
 const APIMiddelwares = require("./Middelwares/APIMiddelwares");
 
 class ServerApp

@@ -1,24 +1,24 @@
-const resStatus = require("./Settings/ResponseStatus");
 const RouterRegister = require("./Settings/RouterRegister");
-const ProductsServices = require("../Services/ProductsService");
+const resStatus = require("./Settings/ResponseStatus");
+const CompanysService = require("../Services/CompanyService");
 const ValidatorHandler = require("../Middelwares/DataValidationsHandler");
 const ProductsValidationSchema = require("../Middelwares/ValidationSchemas/ProductsValidationSchema");
 
-const service = new ProductsServices();
+const service = new CompanysService();
 
-class ProductRoutes extends RouterRegister
-{
+class CompanyRoutes extends RouterRegister{
   constructor(){
-    super("products");
+
+    super("company");
   }
 
   async GetRoutes(router){
 
     router.get("/", async (req, res, next) => {
       try{
-        let products = await service.FindAll();
+        let objectsList = await service.FindAll();
 
-        res.status(resStatus.Ok).json(products);
+        res.status(resStatus.Ok).json(objectsList);
       }
       catch(error){
         next(error);
@@ -101,7 +101,8 @@ class ProductRoutes extends RouterRegister
         }
       );
     });
-}
+  }
+
 
  async PostRoutes(router) {
 
@@ -115,11 +116,11 @@ class ProductRoutes extends RouterRegister
             {
             //console.log("body " + JSON.stringify(body));
 
-            let product =  await service.Create(body);
-            if(product)
+            let createdObject =  await service.Create(body);
+            if(createdObject)
             {
             res.status(resStatus.Created).json({
-                data: product,
+                data: createdObject,
                 message: "Store a Product to MongoDB"
             });
           }
@@ -182,6 +183,7 @@ class ProductRoutes extends RouterRegister
     });
 }
 
+
  async DeleteRoutes(router) {
     router.delete('/:id',
     ValidatorHandler(ProductsValidationSchema.GetSchema, "params"),
@@ -207,11 +209,9 @@ class ProductRoutes extends RouterRegister
         }
         catch (err) {
           next(err);
-          //res.status(resStatus.InternalServerError).send(err.message);
         }
     });
 }
-
 }
 
-module.exports = ProductRoutes;
+module.exports = CompanyRoutes;
