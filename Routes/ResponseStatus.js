@@ -1,4 +1,4 @@
-//Information about http reques status and code status obtained from
+//Information about http request status and code status obtained from
 // https://developer.mozilla.org/es/docs/Web/HTTP/Status
 
 const responseStatus = {

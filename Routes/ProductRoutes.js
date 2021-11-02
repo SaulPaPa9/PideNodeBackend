@@ -157,7 +157,6 @@ class ProductRoutes extends RouterRegister
     });
 }
 
-
  async DeleteRoutes(router) {
     router.delete('/:id',
     ValidatorHandler(ProductsValidationSchema.GetSchema, "params"),

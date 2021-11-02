@@ -1,3 +1,5 @@
+const AuthenticationHandler = require("../Middelwares/AuthenticationHandler");
+
 class RouterRegister{
 
 constructor(baseRouteName){
@@ -13,7 +15,7 @@ this.BaseRouteName = baseRouteName;
   this.PatchRoutes(router);
   this.DeleteRoutes(router);
 
-  app.use("/"+this.BaseRouteName, router);
+  app.use("/"+this.BaseRouteName, AuthenticationHandler.CheckApiKey, router);
  }
 
 
