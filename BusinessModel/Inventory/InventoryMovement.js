@@ -1,7 +1,7 @@
-const {v4 : uuidv4} = require("uuid");
+//const {v4 : uuidv4} = require("uuid");
 class InventoryMovment{
   constructor(dataObject){
-    this.id = dataObject.id || uuidv4();
+    //this.id = dataObject.id || uuidv4();
     this.inventory = dataObject.inventory;
     this.user = dataObject.user;
     this.salesDetail = dataObject.salesDetail;
@@ -11,14 +11,14 @@ class InventoryMovment{
     this.movementType = dataObject.movementType;
     this.equivalenceAmount = dataObject.equivalenceAmount;
     this.timestamp = new Date();
-    this.optimisticLockField = 0;
+   // this.optimisticLockField = 0;
   }
 
   get MovementType() { return this.movementType; }
-  set MovementType(newValue) { this.OnChange(propertyName); this.movementType = newValue; }
+  set MovementType(newValue) { this.OnChange("MovementType",this.movementType, newValue); this.movementType = newValue; }
 
   get MovementDate() { return this.movementDate; }
-  set MovementDate(newValue) { this.OnChange(propertyName); this.movementDate = newValue; }
+  set MovementDate(newValue) { this.OnChange("MovementDate",this.movementDate, newValue); this.movementDate = newValue; }
   
   // DecreaseInventory()
   // {
@@ -37,7 +37,7 @@ class InventoryMovment{
     
   }
 
-  OnChange(propertyName){
+  OnChange(propertyName, oldValue, newValue){
     if(propertyName === "movementDate")
       this.dateUpdated = new Date();
   }
