@@ -21,7 +21,7 @@ class Locality {
     get Municipal() { return this.municipal; }
     set Municipal(newValue) { this.OnChange("Municipal",this.municipal, newValue); this.municipal = newValue; }
 
-    get LocationId() { return this.Name + " " + this.Municipal.Name + " " + this.Municipal.State.Name + " " + this.Municipal.State.Country.Name; }
+    get LocationId() { return this.Name + ", " + this.Municipal.Name + ", " + this.Municipal.State.Name + ", " + this.Municipal.State.Country.Name; }
 
     // Updating data
     Update(data) {
