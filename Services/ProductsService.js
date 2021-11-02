@@ -12,7 +12,7 @@ class ProductsService
 
   async FindAll(){
      // return this.Products;
-     return PersistentProductsService.FindAll();
+     return await PersistentProductsService.FindAll();
     }
 
     async FindByKey(id){
