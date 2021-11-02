@@ -13,7 +13,6 @@ class Address {
         this.indication = dataObject.indication;
         this.home = dataObject.home;
         this.work = dataObject.work;
-        
     }
 
     // Get/Set Data
@@ -50,7 +49,7 @@ class Address {
     get Work() { return this.work; }
     set Work(newValue) { this.OnChange("Work",this.work, newValue); this.work = newValue; }
 
-    get FullAddress() { return this.Indication + " " + this.ZipCode + " " + this.Colony + " " + this.Location + " " + this.Location.Municipal.Name + " " + this.Location.Municipal.State.Name + " " + this.Location.Municipal.State.Country.Name; }
+    get FullAddress() { return this.Indication + ", " + this.ZipCode + ", " + this.Colony + ", " + this.Location + ", " + this.Location.Municipal.Name + ", " + this.Location.Municipal.State.Name + ", " + this.Location.Municipal.State.Country.Name; }
 
     // Updating data
     Update(data) {
