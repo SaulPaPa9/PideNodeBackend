@@ -1,14 +1,16 @@
-const { v4: uuidv4 } = require("uuid");
-class Branch {
+const BaseModel = require("../../Persistance/BaseModel");
+
+class Branch extends BaseModel{
     constructor(dataObject) {
         // Principal data
-        this.id = dataObject.id || uuidv4();
+        this.company = dataObject.company;
         this.idOwner = dataObject.idOwner;
         this.idAddress = dataObject.idAddress;
         // Information data
         this.name = dataObject.name;
         this.nameToPrint = dataObject.nameToPrint;
     }
+    
 
     // Get/Set Data
     get Name() { return this.name; }
